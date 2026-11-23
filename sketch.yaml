@@ -1,0 +1,15 @@
+# arduino-cli build profile: pins the board, the ESP32 core and the
+# libraries so every machine builds the same firmware.
+#   arduino-cli compile            (uses default_profile)
+#   arduino-cli upload -p <port>
+profiles:
+  c3-super-mini:
+    notes: ESP32-C3 Super Mini, USB CDC on boot, DIO flash at 40 MHz
+    fqbn: esp32:esp32:nologo_esp32c3_super_mini:CDCOnBoot=cdc,FlashMode=dio,FlashFreq=40
+    platforms:
+      - platform: esp32:esp32 (3.3.12)
+        platform_index_url: https://espressif.github.io/arduino-esp32/package_esp32_index.json
+    libraries:
+      - U8g2 (2.36.19)
+
+default_profile: c3-super-mini

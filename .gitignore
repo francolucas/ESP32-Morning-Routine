@@ -1,0 +1,7 @@
+# WiFi credentials (copy secrets.example.h)
+secrets.h
+
+# Build output
+build/
+tools/render_screens
+.DS_Store
